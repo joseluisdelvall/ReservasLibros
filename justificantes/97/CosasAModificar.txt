@@ -1,0 +1,6 @@
+COSAS A CORREGIR
+
+- F4: Indicar que solo se pueden hacer reservas hasta la fecha maxima
+- F4.3: El cambio de fecha limite de reservas no es un subproceso de la solicitud, es un proceso general
+- F5.1: Preguntar a Isa
+- F6: Cambiar por completo, esto no son estadisticas son listados, las estadisticas solo muestran totales

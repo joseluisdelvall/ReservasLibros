@@ -1,0 +1,356 @@
+:root {
+    --color-primario: #0693e3;
+    --color-secundario: #e6f2ff;
+    --color-terciario: #006293;
+    --color-alternativo: #c8e3ff;
+    --color-enviar: #809bdf;
+    --color-enviar-hover: #6378a6;
+    --color-boton-aceptar: #6688E1;
+    --color-boton-denegar: #7c8aae;
+    --color-boton-aceptar-hover: #4f6aa3;
+    --color-boton-denegar-hover: #ff6d6d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------- LAYOUT -------------------------- */
+
+header {
+    background-color: var(--color-terciario);
+    padding: 1vh 2vw;
+    display: flow-root;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer {
+    background-color: var(--color-terciario);
+    padding: 3vh 1vw;
+    display: flow-root;
+}
+
+/* ------------- HEADER ------------- */
+
+header > a > img {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+    width: 8vw;
+    float: left;
+}
+
+header > nav {
+    float: left;
+    margin: 4vh 3vw 4vh 3vw;
+    width: 79vw;
+}
+
+header > nav > a {
+    margin: 0 1vw;
+    color: var(--color-secundario);
+    font-size: large;
+    text-decoration: none;
+    padding: 1.5vh 0;
+}
+
+header a:hover {
+    transform: scale(1.05);
+    transition: 0.06s;
+    color: var(--color-alternativo);
+}
+
+@media (max-width: 768px) {
+    
+    header > a {
+        display: block;
+        text-align: center;
+    }
+    
+    header > a > img {
+        float: none;
+        width: 20vw;
+        min-width: 130px;
+    }
+
+    header > nav {
+        float: none;
+        width: fit-content;
+        margin: 3vh auto 0 auto;
+    }
+
+    header > nav > a {
+        display: block;
+        text-align: center;
+    }
+
+}
+
+/* ------------- FOOTER ------------- */
+
+footer > p {
+    color: var(--color-secundario);
+    font-size: large;
+    text-align: center;
+    float: left;
+    width: 50%;
+}
+
+/* -------------------------- MAIN -------------------------- */
+
+h1 {
+
+    text-align: center;
+    padding: 3vh 0vw;
+    color: var(--color-terciario);
+    font-size: 2em;
+
+}
+
+/* ------------- FORMULARIOS Reserva ------------- */
+
+.parrafoCentrado {
+    
+    text-align: center;
+    padding: 1vh 0vw;
+}
+
+.claseFormulario {
+
+    width: 85vw;
+    background-color: var(--color-secundario);
+    margin: auto;
+    padding: 4vh 3vw;
+    border-radius: 10px;
+    max-width: 1000px;
+    position: relative;
+
+}
+
+.claseFormulario > * {
+
+    display: block;
+    margin: 1vh auto;
+
+}
+
+.claseFormulario label {
+
+    color: var(--color-terciario);
+
+}
+
+.claseFormulario > input[type="text"] {
+    padding: 1% 1%;
+    width: 98%;
+    border-radius: 5px;
+    border: 1px solid var(--color-terciario);
+}
+
+#selectForm,
+.claseFormulario > input[type="submit"] {
+
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.claseFormulario > input[type="submit"]  {
+
+    background-color: var(--color-enviar);
+    border: none;
+    font-size: 1em;
+
+}
+
+.claseFormulario > input[type="submit"]:hover  {
+
+    background-color: var(--color-enviar-hover);
+    cursor: pointer;
+
+}
+
+#file-upload {
+    display: none;
+}
+
+#archivoSubida {
+
+    background-color: var(--color-alternativo);
+    border-radius: 5px;
+    padding: 1vh 2vw;
+    
+}
+
+#archivoSubida:hover {
+
+    cursor: pointer;
+
+}
+
+.volverFlecha {
+
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: fit-content;
+
+}
+
+
+/* ------------- Listado de solicitudes de reserva ------------- */
+
+#listado {
+
+    width: 85vw;
+    margin: auto;
+    padding: 4vh 3vw;
+    border-radius: 10px;
+    max-width: 1000px;
+
+}
+
+#listado > a {
+
+    display: block;
+    padding: 2vh 1vw;
+    background-color: var(--color-secundario);
+    margin: 1vh auto;
+    border-radius: 10px;
+    color: var(--color-terciario);
+    text-decoration: none;
+
+}
+
+/* ------------- Solicitud de reserva uno a uno ------------- */
+
+#validacionIndividual {
+    
+    width: 85vw;
+    margin: 2vh auto;
+    padding: 4vh 3vw;
+    border-radius: 10px;
+    max-width: 1300px;
+    background-color: var(--color-secundario);
+    display: flow-root;
+    position: relative;
+    color: var(--color-terciario);
+}
+
+#infoPersona {
+    
+    width: 34%;
+    padding: 5% 3%;
+    float: left;
+}
+
+#divImagen {
+
+    width: 54%;
+    padding: 5% 3%;
+    float: left;
+}
+
+@media (max-width: 768px) {
+
+    #infoPersona {
+    
+        width: 94%;
+        float: none;
+    }
+    
+    #divImagen {
+    
+        width: 94%;
+        float: none;
+    }
+
+}
+
+#validacionIndividual > div > p,
+#validacionIndividual > div > div > p {
+
+    padding: 1vh 1vw;
+
+}
+
+#validacionIndividual > div > div > ul > li {
+
+    list-style-type: none;
+    padding: 1vh 1vw 1vh 2vw;
+
+}
+
+#validacionIndividual > div > p > span,
+#validacionIndividual > div > div > p > span {
+
+    font-weight: bold;
+
+}
+
+#validacionIndividual > div > a {
+
+    display: block;
+    width: fit-content;
+    padding: 10px 15px;
+    margin: 1vh 0;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+}
+
+#aceptar {
+    background-color: var(--color-boton-aceptar);
+    left: 40px;
+    bottom: 10px;
+}
+
+#aceptar:hover {
+    background-color: var(--color-boton-aceptar-hover);
+}
+
+#denegar {
+    /* background-color: var(--color-terciario); */
+    background-color: var(--color-boton-denegar);
+    left: 150px;
+    bottom: 10px;
+}
+
+#denegar:hover {
+    background-color: var(--color-boton-denegar-hover);
+    color: black;
+}
+
+#validacionIndividual > div > img {
+
+    width: 100%;
+}
+
+/* -------------------------- MENSAJES -------------------------- */
+
+.mensaje {
+    
+    width: 85vw;
+    margin: 4vh auto;
+    padding: 4vh 3vw;
+    border-radius: 10px;
+    max-width: 1000px;
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+    text-align: center;
+}
+
+.error {
+    background-color: #ffcccc;
+    color: #ff0000;
+}
+
+.correcto {
+    background-color: #ccffcc;
+}
